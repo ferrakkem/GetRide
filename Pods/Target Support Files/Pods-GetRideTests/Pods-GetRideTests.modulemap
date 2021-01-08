@@ -1,0 +1,6 @@
+framework module Pods_GetRideTests {
+  umbrella header "Pods-GetRideTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_GetRide {
+  umbrella header "Pods-GetRide-umbrella.h"
+
+  export *
+  module * { export * }
+}
