@@ -3,19 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CBDDBEE7926020B090F4ADA /* Pods_GetRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31B51AB989AE811E28AD97 /* Pods_GetRide.framework */; };
+		DF4EB383525082FA012F269A /* Pods_GetRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80634E5591B37F75E229DB27 /* Pods_GetRideTests.framework */; };
 		F3613EDB25A66A200029A1BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3613EDA25A66A200029A1BA /* AppDelegate.swift */; };
 		F3613EDD25A66A200029A1BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3613EDC25A66A200029A1BA /* SceneDelegate.swift */; };
 		F3613EDF25A66A200029A1BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3613EDE25A66A200029A1BA /* ViewController.swift */; };
 		F3613EE225A66A200029A1BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3613EE025A66A200029A1BA /* Main.storyboard */; };
 		F3613EE425A66A220029A1BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3613EE325A66A220029A1BA /* Assets.xcassets */; };
 		F3613EE725A66A220029A1BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3613EE525A66A220029A1BA /* LaunchScreen.storyboard */; };
+		F3613EF025A66FBE0029A1BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3613EEF25A66FBE0029A1BA /* NetworkManager.swift */; };
+		F3613EF325A671050029A1BA /* TripsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3613EF225A671050029A1BA /* TripsModel.swift */; };
+		F36CB97225A67E4800FC06FE /* GetRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB97125A67E4800FC06FE /* GetRideTests.swift */; };
+		F36CB97C25A67E7700FC06FE /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB97B25A67E7700FC06FE /* NetworkManagerTest.swift */; };
+		F36CB99D25A6853B00FC06FE /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB99C25A6853B00FC06FE /* InternetConnectionManager.swift */; };
+		F36CB9B425A6858000FC06FE /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB9AF25A6858000FC06FE /* CustomView.swift */; };
+		F36CB9B625A6858000FC06FE /* NoDataFoundMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB9B125A6858000FC06FE /* NoDataFoundMessages.swift */; };
+		F36CB9B725A6858000FC06FE /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36CB9B325A6858000FC06FE /* K.swift */; };
+		F36D7C0F25A7B7DF001DF683 /* RealmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D7C0E25A7B7DF001DF683 /* RealmDataModel.swift */; };
+		F36D7C1525A7C22F001DF683 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D7C1425A7C22F001DF683 /* DatabaseManager.swift */; };
+		F36D7C2025A7E275001DF683 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = F36D7C1E25A7E275001DF683 /* appstore.png */; };
+		F36D7C2125A7E275001DF683 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = F36D7C1F25A7E275001DF683 /* playstore.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F36CB97425A67E4800FC06FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3613ECF25A66A200029A1BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3613ED625A66A200029A1BA;
+			remoteInfo = GetRide;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		07C2566CA83F72AC48AD550C /* Pods-GetRideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRideTests.debug.xcconfig"; path = "Target Support Files/Pods-GetRideTests/Pods-GetRideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		572B8F4850790884F031E426 /* Pods-GetRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRideTests.release.xcconfig"; path = "Target Support Files/Pods-GetRideTests/Pods-GetRideTests.release.xcconfig"; sourceTree = "<group>"; };
+		80634E5591B37F75E229DB27 /* Pods_GetRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D31B51AB989AE811E28AD97 /* Pods_GetRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B732EBD94C9949A129693CB2 /* Pods-GetRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRide.release.xcconfig"; path = "Target Support Files/Pods-GetRide/Pods-GetRide.release.xcconfig"; sourceTree = "<group>"; };
 		F3613ED725A66A200029A1BA /* GetRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3613EDA25A66A200029A1BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3613EDC25A66A200029A1BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +53,21 @@
 		F3613EE325A66A220029A1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3613EE625A66A220029A1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3613EE825A66A220029A1BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3613EEF25A66FBE0029A1BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F3613EF225A671050029A1BA /* TripsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsModel.swift; sourceTree = "<group>"; };
+		F36CB96F25A67E4800FC06FE /* GetRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36CB97125A67E4800FC06FE /* GetRideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRideTests.swift; sourceTree = "<group>"; };
+		F36CB97325A67E4800FC06FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F36CB97B25A67E7700FC06FE /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		F36CB99C25A6853B00FC06FE /* InternetConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
+		F36CB9AF25A6858000FC06FE /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		F36CB9B125A6858000FC06FE /* NoDataFoundMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataFoundMessages.swift; sourceTree = "<group>"; };
+		F36CB9B325A6858000FC06FE /* K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		F36D7C0E25A7B7DF001DF683 /* RealmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataModel.swift; sourceTree = "<group>"; };
+		F36D7C1425A7C22F001DF683 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		F36D7C1E25A7E275001DF683 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		F36D7C1F25A7E275001DF683 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
+		FC6409DD0C59A235C9B23159 /* Pods-GetRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRide.debug.xcconfig"; path = "Target Support Files/Pods-GetRide/Pods-GetRide.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +75,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBDDBEE7926020B090F4ADA /* Pods_GetRide.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36CB96C25A67E4800FC06FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF4EB383525082FA012F269A /* Pods_GetRideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AB373668521505985AD97AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC6409DD0C59A235C9B23159 /* Pods-GetRide.debug.xcconfig */,
+				B732EBD94C9949A129693CB2 /* Pods-GetRide.release.xcconfig */,
+				07C2566CA83F72AC48AD550C /* Pods-GetRideTests.debug.xcconfig */,
+				572B8F4850790884F031E426 /* Pods-GetRideTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		82604B0B430C962B588EF04B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D31B51AB989AE811E28AD97 /* Pods_GetRide.framework */,
+				80634E5591B37F75E229DB27 /* Pods_GetRideTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3613ECE25A66A200029A1BA = {
 			isa = PBXGroup;
 			children = (
 				F3613ED925A66A200029A1BA /* GetRide */,
+				F36CB97025A67E4800FC06FE /* GetRideTests */,
 				F3613ED825A66A200029A1BA /* Products */,
+				5AB373668521505985AD97AC /* Pods */,
+				82604B0B430C962B588EF04B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F3613ED725A66A200029A1BA /* GetRide.app */,
+				F36CB96F25A67E4800FC06FE /* GetRideTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,13 +135,81 @@
 			children = (
 				F3613EDA25A66A200029A1BA /* AppDelegate.swift */,
 				F3613EDC25A66A200029A1BA /* SceneDelegate.swift */,
-				F3613EDE25A66A200029A1BA /* ViewController.swift */,
-				F3613EE025A66A200029A1BA /* Main.storyboard */,
+				F3613EF525A675550029A1BA /* Model */,
+				F3774E4F25A8618200A453BA /* Controllers */,
+				F3774E4025A8315E00A453BA /* Views */,
+				F36CB99925A6852400FC06FE /* Manager */,
+				F36CB9B225A6858000FC06FE /* Constants */,
+				F36CB9AE25A6858000FC06FE /* Uitilities */,
 				F3613EE325A66A220029A1BA /* Assets.xcassets */,
 				F3613EE525A66A220029A1BA /* LaunchScreen.storyboard */,
 				F3613EE825A66A220029A1BA /* Info.plist */,
+				F36D7C1E25A7E275001DF683 /* appstore.png */,
+				F36D7C1F25A7E275001DF683 /* playstore.png */,
 			);
 			path = GetRide;
+			sourceTree = "<group>";
+		};
+		F3613EF525A675550029A1BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3613EF225A671050029A1BA /* TripsModel.swift */,
+				F36D7C0E25A7B7DF001DF683 /* RealmDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F36CB97025A67E4800FC06FE /* GetRideTests */ = {
+			isa = PBXGroup;
+			children = (
+				F36CB97125A67E4800FC06FE /* GetRideTests.swift */,
+				F36CB97B25A67E7700FC06FE /* NetworkManagerTest.swift */,
+				F36CB97325A67E4800FC06FE /* Info.plist */,
+			);
+			path = GetRideTests;
+			sourceTree = "<group>";
+		};
+		F36CB99925A6852400FC06FE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F3613EEF25A66FBE0029A1BA /* NetworkManager.swift */,
+				F36CB99C25A6853B00FC06FE /* InternetConnectionManager.swift */,
+				F36D7C1425A7C22F001DF683 /* DatabaseManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F36CB9AE25A6858000FC06FE /* Uitilities */ = {
+			isa = PBXGroup;
+			children = (
+				F36CB9B125A6858000FC06FE /* NoDataFoundMessages.swift */,
+				F36CB9AF25A6858000FC06FE /* CustomView.swift */,
+			);
+			path = Uitilities;
+			sourceTree = "<group>";
+		};
+		F36CB9B225A6858000FC06FE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F36CB9B325A6858000FC06FE /* K.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F3774E4025A8315E00A453BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3613EE025A66A200029A1BA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3774E4F25A8618200A453BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3613EDE25A66A200029A1BA /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3613EEB25A66A220029A1BA /* Build configuration list for PBXNativeTarget "GetRide" */;
 			buildPhases = (
+				4504C6844CB7E3C909E1AED2 /* [CP] Check Pods Manifest.lock */,
 				F3613ED325A66A200029A1BA /* Sources */,
 				F3613ED425A66A200029A1BA /* Frameworks */,
 				F3613ED525A66A200029A1BA /* Resources */,
+				1DFFBF95F5F2233672A8F251 /* [CP] Copy Pods Resources */,
+				17DC437268F4D122847C5AAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -86,6 +234,25 @@
 			productName = GetRide;
 			productReference = F3613ED725A66A200029A1BA /* GetRide.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F36CB96E25A67E4800FC06FE /* GetRideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F36CB97825A67E4800FC06FE /* Build configuration list for PBXNativeTarget "GetRideTests" */;
+			buildPhases = (
+				4EF90350A6EDEB7710F57432 /* [CP] Check Pods Manifest.lock */,
+				F36CB96B25A67E4800FC06FE /* Sources */,
+				F36CB96C25A67E4800FC06FE /* Frameworks */,
+				F36CB96D25A67E4800FC06FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F36CB97525A67E4800FC06FE /* PBXTargetDependency */,
+			);
+			name = GetRideTests;
+			productName = GetRideTests;
+			productReference = F36CB96F25A67E4800FC06FE /* GetRideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +265,10 @@
 				TargetAttributes = {
 					F3613ED625A66A200029A1BA = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					F36CB96E25A67E4800FC06FE = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F3613ED625A66A200029A1BA;
 					};
 				};
 			};
@@ -115,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				F3613ED625A66A200029A1BA /* GetRide */,
+				F36CB96E25A67E4800FC06FE /* GetRideTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,25 +297,140 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3613EE725A66A220029A1BA /* LaunchScreen.storyboard in Resources */,
+				F36D7C2025A7E275001DF683 /* appstore.png in Resources */,
 				F3613EE425A66A220029A1BA /* Assets.xcassets in Resources */,
 				F3613EE225A66A200029A1BA /* Main.storyboard in Resources */,
+				F36D7C2125A7E275001DF683 /* playstore.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36CB96D25A67E4800FC06FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17DC437268F4D122847C5AAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DFFBF95F5F2233672A8F251 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetRide/Pods-GetRide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4504C6844CB7E3C909E1AED2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetRide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF90350A6EDEB7710F57432 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetRideTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3613ED325A66A200029A1BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36CB99D25A6853B00FC06FE /* InternetConnectionManager.swift in Sources */,
+				F36D7C1525A7C22F001DF683 /* DatabaseManager.swift in Sources */,
+				F3613EF025A66FBE0029A1BA /* NetworkManager.swift in Sources */,
 				F3613EDF25A66A200029A1BA /* ViewController.swift in Sources */,
+				F36CB9B425A6858000FC06FE /* CustomView.swift in Sources */,
+				F36CB9B625A6858000FC06FE /* NoDataFoundMessages.swift in Sources */,
+				F36D7C0F25A7B7DF001DF683 /* RealmDataModel.swift in Sources */,
+				F36CB9B725A6858000FC06FE /* K.swift in Sources */,
 				F3613EDB25A66A200029A1BA /* AppDelegate.swift in Sources */,
 				F3613EDD25A66A200029A1BA /* SceneDelegate.swift in Sources */,
+				F3613EF325A671050029A1BA /* TripsModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36CB96B25A67E4800FC06FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36CB97C25A67E7700FC06FE /* NetworkManagerTest.swift in Sources */,
+				F36CB97225A67E4800FC06FE /* GetRideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F36CB97525A67E4800FC06FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3613ED625A66A200029A1BA /* GetRide */;
+			targetProxy = F36CB97425A67E4800FC06FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F3613EE025A66A200029A1BA /* Main.storyboard */ = {
@@ -283,6 +570,7 @@
 		};
 		F3613EEC25A66A220029A1BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC6409DD0C59A235C9B23159 /* Pods-GetRide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +584,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.GetRide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F3613EED25A66A220029A1BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B732EBD94C9949A129693CB2 /* Pods-GetRide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +604,49 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.GetRide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F36CB97625A67E4800FC06FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C2566CA83F72AC48AD550C /* Pods-GetRideTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65QC2A2R5W;
+				INFOPLIST_FILE = GetRideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.GetRideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetRide.app/GetRide";
+			};
+			name = Debug;
+		};
+		F36CB97725A67E4800FC06FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 572B8F4850790884F031E426 /* Pods-GetRideTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65QC2A2R5W;
+				INFOPLIST_FILE = GetRideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.GetRideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetRide.app/GetRide";
 			};
 			name = Release;
 		};
@@ -336,6 +667,15 @@
 			buildConfigurations = (
 				F3613EEC25A66A220029A1BA /* Debug */,
 				F3613EED25A66A220029A1BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F36CB97825A67E4800FC06FE /* Build configuration list for PBXNativeTarget "GetRideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F36CB97625A67E4800FC06FE /* Debug */,
+				F36CB97725A67E4800FC06FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
