@@ -27,14 +27,14 @@ class ViewController: UIViewController {
         //check isLocation services on of off
         isLocationAccessEnabled()
         
-       // googleMapView.delegate = self
+        googleMapView.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
-        
+    
     //MARK: - Load Data
     func loadData(){
         networkManager.getTripsdata {(result) in
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             marker.icon = UIImage(named: "car")
             marker.title = String("Direction: \(data.direction)")
             marker.snippet = String("Driver id: \(data.driver_id)")
-            marker.accessibilityLabel = "\(data)"
+            marker.userData = data
             bounds = bounds.includingCoordinate(marker.position)
         }
         
@@ -166,38 +166,31 @@ class ViewController: UIViewController {
             }
         ])
     }
-    
 }
 
 extension ViewController: GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-    
-        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 100))
-        view.backgroundColor = UIColor.white
-        view.layer.opacity = 1.0
-        view.layer.cornerRadius = 6
-        
-        let title = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.width - 16, height: 15))
-        title.tintColor = UIColor.brown
-        
-        let driverMiles = UILabel(frame: CGRect.init(x: 8, y: title.bounds.height + 10, width:view.frame.width - 16, height: 15))
-        driverMiles.tintColor = UIColor.brown
-        
-        let passengerMiles = UILabel(frame: CGRect.init(x: 8, y: driverMiles.bounds.height + 10, width:view.frame.width - 16, height: 15))
-        passengerMiles.tintColor = UIColor.brown
         
         
-        tripData .forEach { (res) in
-            //direction.text = String("Trip Id: \(res.direction)")
-            title.text = String("Trip Id: \(res.trip_id)")
-            driverMiles.text = String("Driver Miles: \(res.driver_miles)")
-            passengerMiles.text = String("Driver Miles: \(res.passenger_miles)")
-        }
+        let tripId = (marker.userData as! RealmDataModel).trip_id
+        let driverId = (marker.userData as! RealmDataModel).driver_id
+        let passengerMiliges = (marker.userData as! RealmDataModel).passenger_miles
+        let direction = (marker.userData as! RealmDataModel).direction
+        let driverMiles = (marker.userData as! RealmDataModel).driver_miles
+
+        let view = Bundle.main.loadNibNamed("MarkerWindow", owner: self, options: nil )![0] as! MarkerWindow
+        let frame = CGRect(x: 10, y: 10, width: 200, height: view.frame.height)
+        view.frame = frame
+        view.layer.cornerRadius = 6.0
+        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
         
-        //view.addSubview(direction)
-        view.addSubview(driverMiles)
-        view.addSubview(title)
+        view.direction.text = String("Direction: \(direction)")
+        view.tripId.text = String("TripId: \(tripId)")
+        view.driverId.text = String("driverId: \(driverId)")
+        view.passengerMiliges.text = String("P Miles: \(passengerMiliges)")
+        view.driverMiles.text = String("D Miles: \(driverMiles)")
+
         return view
     }
     
@@ -211,3 +204,5 @@ extension ViewController: GMSMapViewDelegate{
 extension ViewController: CLLocationManagerDelegate {
     
 }
+
+
