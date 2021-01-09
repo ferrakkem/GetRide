@@ -8,10 +8,12 @@
 import UIKit
 import GoogleMaps
 
+
 class ViewController: UIViewController {
     
     private var networkManager = NetworkManager()
     @IBOutlet weak var googleMapView: GMSMapView!
+    
     
     private let locationManager = CLLocationManager()
     var tripData = [RealmDataModel]()
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         isLocationAccessEnabled()
         
         googleMapView.delegate = self
+        
         
     }
     
@@ -126,8 +129,10 @@ class ViewController: UIViewController {
         let location = locationManager.location?.coordinate
         print("location \(String(describing: location))")
         //cameraMoveToLocation(toLocation: location)
+    
         self.locationManager.stopUpdatingLocation()
     }
+    
     
     //MARK: - is location enable or not
     func isLocationAccessEnabled(){
@@ -168,29 +173,16 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: - GMSMapViewDelegate
 extension ViewController: GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        
-        
-        let tripId = (marker.userData as! RealmDataModel).trip_id
-        let driverId = (marker.userData as! RealmDataModel).driver_id
-        let passengerMiliges = (marker.userData as! RealmDataModel).passenger_miles
-        let direction = (marker.userData as! RealmDataModel).direction
-        let driverMiles = (marker.userData as! RealmDataModel).driver_miles
-
         let view = Bundle.main.loadNibNamed("MarkerWindow", owner: self, options: nil )![0] as! MarkerWindow
         let frame = CGRect(x: 10, y: 10, width: 200, height: view.frame.height)
         view.frame = frame
         view.layer.cornerRadius = 6.0
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
-        
-        view.direction.text = String("Direction: \(direction)")
-        view.tripId.text = String("TripId: \(tripId)")
-        view.driverId.text = String("driverId: \(driverId)")
-        view.passengerMiliges.text = String("P Miles: \(passengerMiliges)")
-        view.driverMiles.text = String("D Miles: \(driverMiles)")
-
+        view.setCellWithValuesOf(with: marker.userData as! RealmDataModel)
         return view
     }
     
