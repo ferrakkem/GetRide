@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     private var networkManager = NetworkManager()
     @IBOutlet weak var googleMapView: GMSMapView!
     
-    
     private let locationManager = CLLocationManager()
     var tripData = [RealmDataModel]()
     var isDriver: Bool = false
@@ -55,6 +54,7 @@ class ViewController: UIViewController {
     
     func showAllLocation(){
         //self.googleMapView.clear()
+        self.LoadingStop()
         
         var bounds = GMSCoordinateBounds()
         if isDriver{
@@ -65,6 +65,7 @@ class ViewController: UIViewController {
             
             tripData = DatabaseManager.shared.getTripInfo()
         }
+        
         for data in tripData{
             let lat = data.lat
             let long = data.long
@@ -104,6 +105,7 @@ class ViewController: UIViewController {
         let isConnection = InternetConnectionManager.isConnectedToNetwork()
         
         if isConnection{
+            self.LoadingStart()
             loadData()
         }else{
             //print("Not Connected")
@@ -129,7 +131,6 @@ class ViewController: UIViewController {
         let location = locationManager.location?.coordinate
         print("location \(String(describing: location))")
         //cameraMoveToLocation(toLocation: location)
-    
         self.locationManager.stopUpdatingLocation()
     }
     
@@ -154,13 +155,17 @@ class ViewController: UIViewController {
     @IBAction func filterResults(_ sender: UIBarButtonItem) {
         self.openAlert(title: "Filter", message: "", alertStyle: .actionSheet, actionTitles: ["Driver Miles"," Passenger Miles", "Cancel"], actionStyles:[.default, .default,.cancel], actions: [
             {_ in
+                
                 self.isDriver = true
                 self.isPassenger = false
+                self.LoadingStop()
                 self.showAllLocation()
             },
             {_ in
+                
                 self.isDriver = false
                 self.isPassenger = true
+                self.LoadingStop()
                 self.showAllLocation()
             },
             {_ in

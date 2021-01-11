@@ -25,12 +25,10 @@ class MarkerWindow: UIView {
     
     //MARK: - Setup values
     func setCellWithValuesOf(with markerData :RealmDataModel) {
-        //print(markerData.trip_date
+        print(markerData.driver_miles)
         
         var localTimeZoneAbbreviation: String { return TimeZone.current.abbreviation() ?? "" }
-        
         let dateInfo = getDate(unixdate: markerData.trip_date, timezone: localTimeZoneAbbreviation)
-        //print(dateInfo)
         
         upDateUI(trip_Id: markerData.trip_id, driver_Id: markerData.driver_id, passenger_Miliges: markerData.passenger_miles, direction: markerData.direction, driver_Miles: markerData.driver_miles, date: dateInfo)
     }
@@ -43,9 +41,9 @@ class MarkerWindow: UIView {
         self.direction.text = "Direction: \(direction)"
         self.driverMiles.text = String("D Milies: \(driver_Miles)")
         self.date.text = String("Date: \(date)")
-        
     }
     
+    //MARK: - convert date
     func getDate(unixdate: Int, timezone: String) -> String {
         //if unixdate == 0 {return EMPTY_STRING}
         let date = NSDate(timeIntervalSince1970: TimeInterval(unixdate))

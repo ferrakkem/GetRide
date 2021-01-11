@@ -29,6 +29,7 @@
 		F36D7C2125A7E275001DF683 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = F36D7C1F25A7E275001DF683 /* playstore.png */; };
 		F3774E7125A87D7000A453BA /* MarkerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3774E7025A87D7000A453BA /* MarkerWindow.swift */; };
 		F3774E7525A87D8300A453BA /* MarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3774E7425A87D8300A453BA /* MarkerWindow.xib */; };
+		F390672E25ACBC70000919B7 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390672D25ACBC70000919B7 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		F36D7C1F25A7E275001DF683 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		F3774E7025A87D7000A453BA /* MarkerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerWindow.swift; sourceTree = "<group>"; };
 		F3774E7425A87D8300A453BA /* MarkerWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerWindow.xib; sourceTree = "<group>"; };
+		F390672D25ACBC70000919B7 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		FC6409DD0C59A235C9B23159 /* Pods-GetRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRide.debug.xcconfig"; path = "Target Support Files/Pods-GetRide/Pods-GetRide.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 			children = (
 				F36CB9B125A6858000FC06FE /* NoDataFoundMessages.swift */,
 				F36CB9AF25A6858000FC06FE /* CustomView.swift */,
+				F390672D25ACBC70000919B7 /* Loader.swift */,
 			);
 			path = Uitilities;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				F36CB9B625A6858000FC06FE /* NoDataFoundMessages.swift in Sources */,
 				F36D7C0F25A7B7DF001DF683 /* RealmDataModel.swift in Sources */,
 				F36CB9B725A6858000FC06FE /* K.swift in Sources */,
+				F390672E25ACBC70000919B7 /* Loader.swift in Sources */,
 				F3613EDB25A66A200029A1BA /* AppDelegate.swift in Sources */,
 				F3613EDD25A66A200029A1BA /* SceneDelegate.swift in Sources */,
 				F3613EF325A671050029A1BA /* TripsModel.swift in Sources */,
