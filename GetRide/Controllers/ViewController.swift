@@ -54,6 +54,7 @@ class ViewController: UIViewController {
     
     func showAllLocation(){
         //self.googleMapView.clear()
+        //start loading
         self.LoadingStop()
         
         var bounds = GMSCoordinateBounds()
