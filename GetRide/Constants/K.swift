@@ -9,7 +9,7 @@
 
 struct K{
     //MARK: - News Feed Table
-    static let googleMapApiKey = "AIzaSyD5YpPLBPN66gx7DlNXdhGsaucn_8JSWp4"
+    static let googleMapApiKey = ""
     
     struct MapZoom {
         static let minZoom: Float = 20.0
